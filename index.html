@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="background">
+        <img id="img-bg" src='imgs/fewclouds.jpg' alt="bg" />
+        </video>
+    </div>
+
+    <div class="container">
+        <div id="registrationPopup" class="popup">
+            <div class="popup-content">
+                <h1 class="register">Setup Your Info</h1>
+                <form id="registrationForm">
+                    <input class="input" type="text" id="firstName" placeholder="Your name">
+                </form>
+            </div>
+        </div>
+
+        <div id="mapPopup" class="popup">
+            <div class="popup-content">
+                <iframe width="75%" height="210" frameborder="0" class="map1" scrolling="no" marginheight="0"
+                    marginwidth="0"
+                    src="https://maps.google.com/maps?q=45.8063872,15.9678464&hl=es;z%3D14&amp&output=embed">
+                </iframe>
+                <br />
+                <small>
+                    <a href="https://maps.google.com/maps?q=45.8063872,15.9678464&hl=es;z%3D14&amp&output=embed"
+                        style="color:#0000FF;text-align:left" class="map2" target="_blank">
+                        See map bigger
+                    </a>
+                </small>
+            </div>
+        </div>
+
+        <button class="button" type="submit">Show the weather</button>
+
+    </div>
+
+    <div class="weather-display"></div>
+    <!-- <div class="weather"></div> -->
+</body>
+
+</html>

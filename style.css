@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#img-bg {
+    object-fit: cover;
+    width: 100%;
+    display: none;
+    height: 100%;
+}
+
+.container {
+    width: 40%;
+    height: 530px;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid black;
+    display: block;
+    background-color: rgb(195, 250, 232);
+}
+
+.input {
+    background-color: white;
+    width: 70%;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid black;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.button {
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: solid 1px rgb(225, 210, 240);
+    background-color: rgb(198, 213, 241);
+    opacity: 0.8;
+    margin-top: 7%;
+}
+
+.map1 {
+    filter: blur(5px);
+}
+
+.register {
+    padding-top: 10px;
+}
+
+.popup {
+    margin-top: 40px;
+
+}
+
+.weather-display {
+    margin-left: 30%;
+    margin-top: 10%;
+    width: 40%;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+p {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
