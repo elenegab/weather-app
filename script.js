@@ -39,7 +39,7 @@ if ("geolocation" in navigator) {
                   'clear sky': 'imgs/clearsky.jpg',
                   'few clouds': 'imgs/fewclouds.jpg',
                   'scattered clouds': 'imgs/scatteredclouds.jpg',
-                  'broken clouds': 'imgs/brokenclouds.jpg',
+                  'broken clouds': 'imgs/brokenclouds.webp',
                   'shower rain': 'imgs/showerrain.jpg',
                   'rain': 'imgs/rain.jpg',
                   'thunderstorm': 'imgs/thunder.jpg',
