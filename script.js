@@ -45,7 +45,7 @@ if ("geolocation" in navigator) {
                   'thunderstorm': 'imgs/thunder.jpg',
                   'snow': 'imgs/snow.jpg',
                   'mist': 'imgs/misty.JPG',
-                  'overcast clouds': 'imgs/overcastclouds.jpg'
+                  'overcast clouds': 'imgs/overcastclouds.jpg',
                 };
 
                 const weatherDescription = data.weather[0].description;
