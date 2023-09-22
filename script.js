@@ -235,7 +235,7 @@ if ("geolocation" in navigator) {
                 const weatherDescriptionsMapping = {
                   'clear sky': 'imgs/clearsky.jpg',
                   'few clouds': 'imgs/fewclouds.jpg',
-                  'scattered clouds': 'imgs/scatteredclouds/jpg',
+                  'scattered clouds': 'imgs/scatteredclouds.jpg',
                   'broken clouds': 'imgs/brokenclouds.jpg',
                   'shower rain': 'imgs/showerrain.jpg',
                   'rain': 'imgs/rain.jpg',
