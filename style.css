@@ -12,13 +12,37 @@ body {
     height: 100%;
     z-index: -1;
 }
+@keyframes backgroundAnimation {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(10px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
 
 #img-bg {
     object-fit: cover;
     width: 100%;
     display: none;
     height: 100%;
+    animation: backgroundAnimation 10s infinite alternate;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
+
+  
 
 .container {
     width: 40%;
