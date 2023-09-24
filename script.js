@@ -1,12 +1,21 @@
 
-const input1 = document.querySelector(".input");
+const input = document.querySelectorAll(".input");
 const button = document.querySelector(".button");
 const container = document.querySelector(".container");
 const weatherDisplay = document.querySelector(".weather-display");
+const input1 = input[0]
+const input2 = input[1]
+const input3 = input[2]
+const input4 = input[3]
 
 let weatherFetched = false; 
 let latitude = 0; 
 let longitude = 0; 
+
+const validateEmail = (email) => {
+  return 
+};
+
 
 if ("geolocation" in navigator) {
   // Geolocation is available
@@ -20,12 +29,21 @@ if ("geolocation" in navigator) {
       }, 800)
       document.getElementsByClassName("map2")[0].href = `https://maps.google.com/maps(?q=${latitude},${longitude}&hl=es;z%3D14&amp&output=embed`
       button.addEventListener("click", () => {
+       
         if (input1.value === "") {
           input1.style.border = "1px solid red";
           input1.value = ""; 
           input1.placeholder = "This field is required"; 
         } else {
           input1.style.border = "";
+
+          if(input2.value  != "" && validateEmail(input2.value)){
+            console.log("success");
+          }else{
+            input2.style.border = "1px solid red"
+            input2.value = ""; 
+            input2.placeholder = "This field is required"; 
+          } 
 
           if (!weatherFetched) {
             const apiKey = '1f8e49566cee5cc1e31369f230339bad';
