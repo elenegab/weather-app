@@ -1,3 +1,4 @@
+"use strict";
 import { validateDate, validateEmail, validateName, validatePassword } from "./validations.js";
 
 const input = document.querySelectorAll(".input");
