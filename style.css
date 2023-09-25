@@ -121,9 +121,18 @@ h2 {
 }
 
 @media(max-width:500px) {
-   
-
-    
+    #img-bg {
+        width: 100%;
+        display: none;
+        height: 100%;
+        animation: backgroundAnimation 10s infinite alternate;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }    
    
     .container{
         width: 100%;
