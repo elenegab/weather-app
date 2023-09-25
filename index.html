@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script defer
+    type="module"
+     src="script.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -22,14 +25,18 @@
         <div id="registrationPopup" class="popup">
             <div class="popup-content">
                 <h1 class="register">Setup Your Info</h1>
-                <form id="registrationForm">
-                    <input class="input" type="text" id="firstName" placeholder="Your name">
-                    <input class="input" type="email" id="firstName" placeholder="Email">
-                    <input class="input" type="password" id="firstName" placeholder="Password">
-                    <input class="input" type="date" id="birthday" name="birthday">
-
-
-                </form>
+                <input class="input" type="text" id="firstName" placeholder="Your name">
+                <div class="error" id="firstNameError"></div>
+            
+                <input class="input" type="email" id="email" placeholder="Email">
+                <div class="error" id="emailError"></div>
+            
+                <input class="input" type="password" id="password" placeholder="Password">
+                <div class="error" id="passwordError"></div>
+            
+                <input class="input" type="date" id="birthday" name="birthday">
+                <div class="error" id="birthdayError"></div>
+            
             </div>
         </div>
 

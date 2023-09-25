@@ -1,3 +1,4 @@
+import { validateDate, validateEmail, validateName, validatePassword } from "./validations.js";
 
 const input = document.querySelectorAll(".input");
 const button = document.querySelector(".button");
@@ -8,19 +9,16 @@ const input2 = input[1]
 const input3 = input[2]
 const input4 = input[3]
 
-let weatherFetched = false; 
 let latitude = 0; 
 let longitude = 0; 
 
-const validateEmail = (email) => {
-  return 
-};
-
-
 if ("geolocation" in navigator) {
+  console.log('aqq')
   // Geolocation is available
+
   navigator.geolocation.getCurrentPosition(
     function (position) {
+      console.log(position)
       latitude = position.coords.latitude;
       longitude = position.coords.longitude;
       document.getElementsByClassName("map1")[0].src = `https://maps.google.com/maps?q=${latitude},${longitude}&hl=es;z%3D14&amp&output=embed`
@@ -28,24 +26,53 @@ if ("geolocation" in navigator) {
         document.getElementsByClassName("map1")[0].style.filter = "blur(0)"
       }, 800)
       document.getElementsByClassName("map2")[0].href = `https://maps.google.com/maps(?q=${latitude},${longitude}&hl=es;z%3D14&amp&output=embed`
-      button.addEventListener("click", () => {
-       
-        if (input1.value === "") {
-          input1.style.border = "1px solid red";
-          input1.value = ""; 
-          input1.placeholder = "This field is required"; 
-        } else {
-          input1.style.border = "";
+      button.addEventListener("click", (event) => {
+        event.preventDefault(); 
+          const firstNameValue = input[0].value;
+          const emailValue = input[1].value;
+          const passwordValue = input[2].value;
+          const birthdayValue = input[3].value;
+      
+          const firstNameError = document.getElementById("firstNameError");
+          const emailError = document.getElementById("emailError");
+          const passwordError = document.getElementById("passwordError");
+          const birthdayError = document.getElementById("birthdayError");
+      
+          firstNameError.textContent = "";
+          emailError.textContent = "";
+          passwordError.textContent = "";
+          birthdayError.textContent = "";
+      
+          const firstNameValidation = validateName(firstNameValue);
+          const emailValidation = validateEmail(emailValue);
+          const passwordValidation = validatePassword(passwordValue);
+          const birthdayValidation = validateDate(birthdayValue);
+      
+          if (firstNameValidation !== true) {
+              firstNameError.textContent = firstNameValidation;
+          }
+      
+          if (emailValidation !== true) {
+              emailError.textContent = emailValidation;
+          }
+      
+          if (passwordValidation !== true) {
+              passwordError.textContent = passwordValidation;
+          }
+      
+          if (birthdayValidation !== true) {
+              birthdayError.textContent = birthdayValidation;
+          }
+      
+          if (
+              firstNameValidation === true &&
+              emailValidation === true &&
+              passwordValidation === true &&
+              birthdayValidation === true
+          ) {
+   
+      
 
-          if(input2.value  != "" && validateEmail(input2.value)){
-            console.log("success");
-          }else{
-            input2.style.border = "1px solid red"
-            input2.value = ""; 
-            input2.placeholder = "This field is required"; 
-          } 
-
-          if (!weatherFetched) {
             const apiKey = '1f8e49566cee5cc1e31369f230339bad';
             const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
@@ -87,17 +114,14 @@ if ("geolocation" in navigator) {
                 `;
 
                 container.style.display = "none";
-                weatherFetched = true;
 
                 console.log(data);
               })
               .catch((error) => {
                 console.error("Error fetching weather data:", error);
               });
-          } else {
-            console.log("Weather data already fetched.");
-          }
-        }
+            }
+
       });
     },
     function (error) {
@@ -115,7 +139,11 @@ if ("geolocation" in navigator) {
           console.error("An unknown error occurred.");
           break;
       }
-    }
+    }, function(err){
+      console.log(err)
+    }, {enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0}
   );
 } else {
   console.error("Geolocation is not available in this browser.");

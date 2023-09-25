@@ -1,20 +1,21 @@
 export function validateName(input){
-    if(input === '') return false;
+    if(input === '') return 'Name cannot be empty';
     return true;
 }
 
 export function validateEmail(input){
-    if(input === '') return false;
-    if(String(input)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    )) return true
+    if(input === '') return 'Email cannot be empty';
+    if(!input.includes('@')) return 'Email must be valid';
+    return true;
 }
 
 export function validatePassword(input){
-    if(input === '') return 'Password is Empty'
-    if(input.length() < 8) return false
+    if(input === '') return 'Password cannot be empty';
+    if(input.length < 8) return 'Password must be at least 8 characters';
+    return true;
+}
 
-    
+export function validateDate(input){
+    if(input === '') return 'Date cannot be empty';
+    return true;
 }
