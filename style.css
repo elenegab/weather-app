@@ -82,7 +82,7 @@ body {
     border: solid 1px rgb(225, 210, 240);
     background-color: rgb(198, 213, 241);
     opacity: 0.8;
-    margin-top: 7%;
+    margin-top: 5%;
 }
 
 .map1 {
@@ -118,4 +118,17 @@ p {
 
 h2 {
     font-size: 30px;
+}
+
+@media(max-width:500px) {
+   
+    .container{
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        padding-top: 1px;
+    }
+    .button{
+        margin-top: 7px;
+    }
 }
