@@ -3,10 +3,6 @@ body {
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
    
-    background-image: url('imgs/fewclouds.jpg'); /* Set the background image here */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .background {
@@ -34,6 +30,10 @@ body {
   
 
 #img-bg {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     object-fit: cover;
     width: 100%;
     display: none;
