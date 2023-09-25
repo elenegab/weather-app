@@ -77,8 +77,7 @@ if ("geolocation" in navigator) {
               passwordValidation === true &&
               birthdayValidation === true
           ) {
-   
-      
+            
 
             const apiKey = '1f8e49566cee5cc1e31369f230339bad';
             const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
@@ -86,6 +85,8 @@ if ("geolocation" in navigator) {
             fetch(apiUrl)
               .then((response) => response.json())
               .then((data) => {
+                container.style.display = "none";
+
                 const temperature = data.main.temp;
                 const weatherDescriptionsMapping = {
                   'clear sky': 'imgs/clearsky.jpg',
@@ -115,12 +116,12 @@ if ("geolocation" in navigator) {
 
 
                 weatherDisplay.innerHTML = `
-                  <h2>Hi ${input1.value}, weather in Your Location</h2>
+                  <h2>Hi ${firstNameValue}, weather in Your Location</h2>
                   <p> ${temperature}°C</p>
                   <p>Condition: ${weatherDescription}</p>
                 `;
 
-                container.style.display = "none";
+                // container.style.display = "none";
 
                 console.log(data);
               })
