@@ -4,10 +4,10 @@ const input = document.querySelectorAll(".input");
 const button = document.querySelector(".button");
 const container = document.querySelector(".container");
 const weatherDisplay = document.querySelector(".weather-display");
-const input1 = input[0]
-const input2 = input[1]
-const input3 = input[2]
-const input4 = input[3]
+// const input1 = input[0]
+// const input2 = input[1]
+// const input3 = input[2]
+// const input4 = input[3]
 
 let latitude = 0; 
 let longitude = 0; 
@@ -50,18 +50,25 @@ if ("geolocation" in navigator) {
       
           if (firstNameValidation !== true) {
               firstNameError.textContent = firstNameValidation;
+              input[0].style.border = '1px solid red';
           }
       
           if (emailValidation !== true) {
               emailError.textContent = emailValidation;
+              input[1].style.border = '1px solid red';
+
           }
       
           if (passwordValidation !== true) {
               passwordError.textContent = passwordValidation;
+              input[2].style.border = '1px solid red';
+
           }
       
           if (birthdayValidation !== true) {
               birthdayError.textContent = birthdayValidation;
+              input[3].style.border = '1px solid red';
+
           }
       
           if (

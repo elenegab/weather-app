@@ -1,5 +1,5 @@
 export function validateName(input){
-    if(input === '') return 'Name cannot be empty';
+    if(input === '')return 'Name cannot be empty';
     return true;
 }
 
