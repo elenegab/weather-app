@@ -5,10 +5,7 @@ const input = document.querySelectorAll(".input");
 const button = document.querySelector(".button");
 const container = document.querySelector(".container");
 const weatherDisplay = document.querySelector(".weather-display");
-// const input1 = input[0]
-// const input2 = input[1]
-// const input3 = input[2]
-// const input4 = input[3]
+
 
 let latitude = 0; 
 let longitude = 0; 
