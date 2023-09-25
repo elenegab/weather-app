@@ -2,6 +2,11 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
+   
+    background-image: url('imgs/fewclouds.jpg'); /* Set the background image here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .background {
@@ -121,6 +126,9 @@ h2 {
 }
 
 @media(max-width:500px) {
+    body {
+        background-size: contain;
+    }
    
     .container{
         width: 100%;
