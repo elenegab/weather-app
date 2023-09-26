@@ -121,6 +121,26 @@ h2 {
 }
 
 @media(max-width:500px) {
+    /* body{
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    @keyframes backgroundAnimation {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        50% {
+          transform: translateX(15px);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
     #img-bg {
         width: 100%;
         display: none;
@@ -152,7 +172,65 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-    
-    
     }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 30px;
+    } */
+    /* Remove the fixed background-attachment from the body */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Remove z-index and animation properties for #img-bg */
+#img-bg {
+    width: 100%;
+    height: 100vh; /* Use 100vh to set the height to the full viewport height */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Adjust the container to occupy full viewport height */
+.container {
+    margin-top: -80px;
+    width: 100%;
+    min-height: 100vh; /* Set the minimum height to 100vh */
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    background-color: rgb(195, 250, 232);
+}
+h2{
+    font-size: 20px;
+}
+p{
+    font-size: 30px;
+}
+.popup-content{
+    margin-top: -20px;
+}
+.button {
+    width: 60%;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: solid 1px rgb(225, 210, 240);
+    background-color: rgb(198, 213, 241);
+    opacity: 0.8;
+    margin-top: 2%;
+}
+
 }
